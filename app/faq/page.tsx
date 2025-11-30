@@ -79,6 +79,73 @@ export default function FAQDashboard() {
               thousands of records per import and uses efficient batch processing to load data quickly.
             </p>
           </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h2 className="text-xl font-semibold mb-4 text-gray-900">What does R² (Coefficient of Determination) mean?</h2>
+            <p className="text-gray-600 leading-relaxed">
+              R² measures how well the model explains the variance in the target variable.<br />
+                <ul className="list-disc ml-6 text-gray-600 leading-relaxed">
+                <li>1.0 → perfect prediction</li>
+                <li>0 → model is no better than predicting the mean</li>
+                <li>Negative → model is worse than the mean</li>
+                <ul className="list-disc ml-8 text-gray-600 leading-relaxed"></ul>
+                It basically tells you how much of the outcome your model can “explain.”
+              </ul>
+            </p>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h2 className="text-xl font-semibold mb-4 text-gray-900">What does MAE (Mean Absolute Error) mean?</h2>
+            <p className="text-gray-600 leading-relaxed">
+              MAE is the average size of the errors, without considering direction.<br />
+                <ul className="list-disc ml-6 text-gray-600 leading-relaxed">
+                <li>Easy to interpret</li>
+                <li>Lower is better</li>
+                <ul className="list-disc ml-8 text-gray-600 leading-relaxed"></ul>
+                Example: MAE = 50 means predictions are off by 50 units on average. 
+              </ul>
+            </p>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h2 className="text-xl font-semibold mb-4 text-gray-900">What does MAPE (Mean Absolute Percentage Error) mean?</h2>
+            <p className="text-gray-600 leading-relaxed">
+              MAPE tells you the average error as a percentage of the actual value.<br />
+                <ul className="list-disc ml-6 text-gray-600 leading-relaxed">
+                <li>Lower is better</li>
+                <li>Not reliable when actual values are close to zero</li>
+                <ul className="list-disc ml-8 text-gray-600 leading-relaxed"></ul>
+                Example: MAPE = 10% → predictions are off by 10% on average. 
+              </ul>
+            </p>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h2 className="text-xl font-semibold mb-4 text-gray-900">What does MASE (Mean Absolute Scaled Error) mean?</h2>
+            <p className="text-gray-600 leading-relaxed">
+              MASE compares your model’s error to a simple baseline (usually a naïve forecast).<br />
+                <ul className="list-disc ml-6 text-gray-600 leading-relaxed">
+                <li>MASE &lt; 1 → model is better than the baseline</li>
+                <li>MASE = 1 → model is equal to baseline</li>
+                <li>MASE &gt; 1 → model is worse</li>
+                <ul className="list-disc ml-8 text-gray-600 leading-relaxed"></ul>
+                Useful for time series because it shows if your model actually beats a simple forecast. 
+              </ul>
+            </p>
+          </div>
+
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h2 className="text-xl font-semibold mb-4 text-gray-900">What does RMSE (Root Mean Squared Error) mean?</h2>
+            <p className="text-gray-600 leading-relaxed">
+              RMSE measures the average error but penalizes large mistakes more heavily.<br />
+                <ul className="list-disc ml-6 text-gray-600 leading-relaxed">
+                <li>Sensitive to outliers</li>
+                <li>Lower is better</li>
+                <ul className="list-disc ml-8 text-gray-600 leading-relaxed"></ul>
+                Example: RMSE = 60 means that large errors have more influence than in MAE. 
+              </ul>
+            </p>
+          </div>
         </section>
       </main>
     </div>
